@@ -1,9 +1,8 @@
 ZPLUG_HOME := ~/.zplug
-.PHONY all install-plugin-manager copy-config init
 all: install-plugin-manager copy-config init
 
 
-install-plugin-manager:
+install-plugin-manager: $(ZPLUG_HOME)
 	git clone https://github.com/zplug/zplug $(ZPLUG_HOME)
 
 copy-config:
