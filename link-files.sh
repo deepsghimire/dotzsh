@@ -7,7 +7,7 @@ while read -r destination source ; do
     dir_map[$source]=$destination
 done < meta
 
-existing_files=()
+declare -a existing_files=()
 
 for dest in "${dir_map[@]}"; do
     if [[ -s "$dest" ]]; then
