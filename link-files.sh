@@ -27,5 +27,5 @@ for source in "${!dir_map[@]}";do
     echo symlinking "$source" to "${dir_map[$source]}" >&2
     destination="${dir_map[$source]/#~/$HOME}"
     mkdir -p "${destination%/*}"
-    ln -s "$source" "${dir_map[$source]/#~/$HOME}"
+    ln -s "./$source" "${dir_map[$source]/#~/$HOME}"
 done
