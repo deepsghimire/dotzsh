@@ -25,5 +25,5 @@ fi
 
 for source in "${!dir_map[@]}";do
     echo symlinking "$source" to "${dir_map[$source]}" >&2
-    ln -s "$source" "${dir_map[$source]}"
+    ln -s "$source" "${dir_map[$source]/#~/$HOME}"
 done
