@@ -1,0 +1,6 @@
+setopt incappendhistorytime  cdablevars extendedglob
+setopt bare_glob_qual no_notify csh_null_glob hist_verify 
+setopt hist_reduce_blanks hist_ignore_space no_beep hist_find_no_dups
+setopt noclobber
+setopt extended_history
+setopt auto_cd auto_pushd pushd_to_home
