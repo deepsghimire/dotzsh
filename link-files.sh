@@ -7,7 +7,7 @@ while read -r destination source ; do
     dir_map[$source]=$destination
 done < meta
 
-declare -a existing_files=()
+existing_files=()
 
 for dest in "${dir_map[@]}"; do
     if [[ -s "$dest" ]]; then
@@ -16,7 +16,7 @@ for dest in "${dir_map[@]}"; do
 done
 
 
-if [[ "${#existing_files}" -ne 0 ]]; then
+if [[ "${#existing_files[@]}" -ne 0 ]]; then
     echo files exists in directory >&2
     (IFS=,; printf "\t %s" "${existing_files[*]}")
     exit 1
