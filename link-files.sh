@@ -10,7 +10,8 @@ done < meta
 existing_files=()
 
 for dest in "${dir_map[@]}"; do
-    if [[ -e "$dest" ]]; then
+    destination="${dest/#~/$HOME}"
+    if [[ -e "$destination" ]]; then
         existing_files+=("$dest")
     fi
 done
